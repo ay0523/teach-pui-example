@@ -1,0 +1,29 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+#thispage{
+    background-color: yellow;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+#checkoutbutton{
+    background-color: yellow;
+  }  

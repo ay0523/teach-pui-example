@@ -1,0 +1,36 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product:hover{
+    background-color: yellow;
+}
+
+.productimage{
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+#thispage{
+    background-color: yellow;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
