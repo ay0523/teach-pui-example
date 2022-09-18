@@ -1,8 +1,6 @@
-.flex-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+#logo {    
+  text-align: left;  
+  }  
 .content{
     margin-left: auto;
     margin-right: auto;
