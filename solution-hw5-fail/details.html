@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel = "stylesheet" href = "stylespdetail.css">
+  <meta charset="UTF-8">
+  <title>Page 2: Product Detail</title>
+  
+  <body>
+    <div class="header">
+      <div class = "logoimg">
+        <a href="./index.html"><img src="logo/logo-01.svg" width = "400px" height = "235px"></a>
+      </div>
+
+      <div class = "headerinfo">
+        <div class = "tabs">
+          <div class = "productstab">
+            <h2><a href="./index.html"><span id = "thispage">PRODUCTS</span></a></h2>
+          </div>
+          <div class = "carttab">
+            <h2><a href="./shoppingcart.html">CART</a></h2>
+          </div>
+        </div>
+        <div class = "slogan">
+          <h1><span class="sloganInfo"></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class ="productimg">
+        <img class = "detailImg" src="" width = "650">
+      </div>
+      <div class = "info">
+        <p class = "caption">
+          Customize our delicious, <br> hand-made cinnamon roll to <br> your liking!
+        </p>
+        <div class="dropdown caption">
+          <label for = "glazing-menu">Glazing:<br></label>
+          <select name = "glazing-menu" id = "glazing-menu" onChange = "glazingChange(this)">
+          </select>
+          </div>
+          <br>
+          <br>
+        <div class="dropdown caption">
+          <label for = "pack-size">Pack Size:<br></label>
+          <select name = "pack-size" id = "pack-size" onChange = "packChange(this)">
+          </select>
+          <h3> <span class = "price"> $2.49 </span> <button id = "cartbutton"> Add to Cart</button></h3> 
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script type = "module" src="solution-hw5/js/addRoll.js"></script>
+  <script type = "module" src="solution-hw5/js/rollsData.js"></script>
+  <script src="solution-hw5/js/price.js"></script>
+  
+</html>
+

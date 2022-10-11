@@ -1,0 +1,146 @@
+.header{
+  width: 1200px;
+  display: flex;
+  padding-bottom: 80px;  
+  height: 235px;
+}
+
+.logoimg{
+  padding-right: 20px;
+}
+
+.headerinfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs{
+  display: flex;
+  height: 100px;
+  border-bottom: 5px solid black;
+}
+
+.productstab{
+  width:520px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.carttab{
+  width:200px;
+  text-align: center;
+  margin-right: 30px;
+}
+
+h2{
+  margin-top: 35px;
+  font-family: Arial;
+  font-weight: lighter;
+}
+
+.slogan{
+  display: flex;
+  margin-top: 50px;
+  align-items: flex-end;
+}
+
+#thispage{
+  background-color: yellow;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: left;
+  font-family: Helvetica;
+  font-weight: lighter;
+}
+
+.flex-container{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  display: flex;
+  margin-left: 400px;
+}
+.img{
+  width: 130px;
+  height: 130px;
+  border: 3px solid black;
+}
+.info{
+  margin-left: 50px;
+  margin-top: 10px;
+  width:300px;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.price{
+  margin-left:100px;
+  width:100px;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: lighter;
+  text-align: right;
+}
+
+.remove{
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 10%;
+  font-family: Helvetica;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.bottomborder{
+  padding-bottom: 20px;
+  border-bottom: 5px solid black;
+}
+
+.totalinfo{
+  display: flex;
+  margin-left: 586px;
+}
+.total{
+  width:300px;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: lighter;
+}
+.totalprice{
+  margin-left:100px;
+  width:100px;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: lighter;
+  text-align: right;
+}
+
+.checkout{
+  display:flex;
+  width: 1200px;
+  justify-content: right;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+#checkoutbutton{
+  background-color: yellow;
+  width: 170px;
+  height: 50px;
+  border: 4px solid black;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight:550;
+}  
+
+a{
+    text-decoration: none;
+    color: black;
+  }
+  
+
