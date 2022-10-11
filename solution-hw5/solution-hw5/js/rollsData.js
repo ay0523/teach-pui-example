@@ -25,22 +25,22 @@ const rolls = {
     }    
 }
 const original = {
-    type: "Keep Original",
+    type: "Original",
     glazingPrice: 0
 };
 
 const sugarMilk = {
-    type: "Sugar milk",
+    type: "Sugar Milk",
     glazingPrice: 0
 };
 
 const vanilla = {
-    type: "Vanilla milk",
+    type: "Vanilla Milk",
     glazingPrice: 0.50
 };
 
 const chocolate = {
-    type: "Double chocolate",
+    type: "Double Chocolate",
     glazingPrice: 1.50
 };
 
