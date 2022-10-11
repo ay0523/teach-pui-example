@@ -39,7 +39,7 @@ const vanilla = {
     glazingPrice: 0.50
 };
 
-const choco = {
+const chocolate = {
     type: "Double chocolate",
     glazingPrice: 1.50
 };
@@ -64,5 +64,5 @@ const pack12 = {
     packPrice: 10
 };
 
-const glazingOptions = [original, sugarMilk, vanilla, choco];
+const glazingOptions = [original, sugarMilk, vanilla, chocolate];
 const packOptions = [pack1, pack3, pack6, pack12];
