@@ -35,16 +35,16 @@
         </p>
         <div class="dropdown caption">
           <label for = "glazing-menu">Glazing:<br></label>
-          <select name = "glazing-menu" id = "glazing-menu" onChange = "glazingChange(this)">
+          <select name = "glazing-menu" id = "glazing-menu" onChange = "priceChange()">
           </select>
           </div>
           <br>
           <br>
         <div class="dropdown caption">
           <label for = "pack-size">Pack Size:<br></label>
-          <select name = "pack-size" id = "pack-size" onChange = "packChange(this)">
+          <select name = "pack-size" id = "pack-size" onChange = "priceChange()">
           </select>
-          <h3> <span class = "price"> $2.49 </span> <button id = "cartbutton"> Add to Cart</button></h3> 
+          <h3> <span id = "price"> </span> <button id = "cartbutton" onChange = "addToCart()"> Add to Cart</button></h3> 
         </div>
       </div>
     </div>
@@ -52,8 +52,7 @@
 
 
   </body>
-  <script type = "module" src="solution-hw4/js/addRoll.js"></script>
-  <script type = "module" src="solution-hw4/js/rollsData.js"></script>
-  <script src="solution-hw4/js/price.js"></script>
+  <script src="solution-hw5/js/rollsData.js"></script>
+  <script src="solution-hw5/js/addRoll.js"></script>
 </html>
 

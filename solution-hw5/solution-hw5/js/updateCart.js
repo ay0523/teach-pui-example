@@ -34,13 +34,13 @@ function findPrice(item){
 
 function createItem(item){
     const template = document.querySelector("#item-template");
-    const clone = template.content.cloneNode(true);
-    item.element = clone.querySelector(".item");
+    //const clone = template.content.cloneNode(true);
+    //item.element = clone.querySelector(".item");
 
-    const btnDelete = item.element.querySelector('.remove');
+    const btnDelete = item.element.querySelector('.cartRemove');
     btnDelete.addEventListener('click', () => {
         deleteItem(item);
-        const cartPrice = document.getElementById("totalprice")
+        const cartPrice = document.getElementById("totalprice");
         if (cart.length == 0) {
             cartPrice.innerText = '$0.00';
         } 

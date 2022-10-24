@@ -92,8 +92,9 @@ label{
   margin-left: 60px;
 }
 
-.price{
+#price{
   margin-left: 40px;
+  margin-right: 100px;
   padding-right: 38px;
   font-family: Helvetica;
   font-size: 25px;
@@ -128,6 +129,7 @@ select{
   font-size: 20px;
   font-weight: 600;
   justify-content: right;
+  margin-left: 100px;
 }
 
 h3{
