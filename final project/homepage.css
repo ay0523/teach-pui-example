@@ -1,0 +1,49 @@
+.header{
+    display: flex;
+    width: 1500px;
+    border-bottom: 5px solid green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.titleInfo{
+    margin-left: 490px;
+    font-family: Bradley Hand;
+    font-size: larger;
+}
+
+.helpButton{
+margin-left: 300px;
+}
+
+.lessons-flex{
+    width: 1500px;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lessons-flex div{
+    width: 300px;
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: Gill Sans;
+    font-size: x-large;
+}
+
+.lessonImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+}
+
