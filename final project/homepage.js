@@ -1,5 +1,5 @@
 
-/*POP UP*/
+//instructions pop up
 var closePopup = document.getElementById("popupclose");
 var overlay = document.getElementById("overlay");
 var popup = document.getElementById("popup");

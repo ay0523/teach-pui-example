@@ -139,13 +139,15 @@ createSets()
 //create stopwatch
 
 let game = true
-let seconds = 00; // starting number of seconds
+let seconds = 00;
 if (game){
     var x = setInterval(() => {
         seconds += 1
         $("#seconds").text(seconds)
     }, 1000);
 }
+
+//get clicked buttons
 
 $('input[name="c-radio"]').click(function() {
     if($('input[name="e-radio"]:checked').val() == null) {
@@ -166,6 +168,8 @@ $('input[name="e-radio"]').click(function() {
 
 let score = 0
 let correct = 0
+
+//check clicked buttons for match
 
 function checkSelected () {
     let eng = $('input[name="e-radio"]:checked')
@@ -214,6 +218,8 @@ function checkSelected () {
     }
 }
 
+//if user gets an incorrect match
+
 function displayTryAgain(text) {
     $("<table id='overlay'><tbody><tr><td>" + text + "</td></tr></tbody></table>").css({
         "position": "fixed",
@@ -235,6 +241,8 @@ function displayTryAgain(text) {
 function removeTryAgain() {
     $("#overlay").remove();
 }
+
+//once game is over
 
 function displayGameOver() {
     $("#countdown").addClass("hidden");
