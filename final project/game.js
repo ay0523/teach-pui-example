@@ -25,7 +25,7 @@ let cardData = {
        ["Ten", "e.numbers/ten.png", "Shi", "c.numbers/shi.png"],
        ["Hundred", "e.numbers/hundred.png", "Bai", "c.numbers/bai.png"],
        ["Thousand", "e.numbers/thousand.png", "Qian", "c.numbers/qian.png"],
-       ["Ten Thousand", "e.numbers/tenthousand.png", "Wan", "c.numbers/wan.png"],
+       ["Ten Thousand", "e.numbers/tenthousand.png","Wan", "c.numbers/wan.png"],
     ], 
 
     "colors": [
@@ -46,6 +46,7 @@ let cardData = {
     ]
 
 }
+
 
 let gameData = {
     "numbers": {

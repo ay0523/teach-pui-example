@@ -3,175 +3,180 @@
 <head>
     <link rel = "stylesheet" href = "game.css">
     <meta charset="UTF-8">
-    <title>Game Page</title>
+    <title>Chinese Vocabulary Matching Game Page</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
   <body onload="populateCards()">
-    <div class = "container">
-      <div class = "d-flex justify-content-start">
-        <button id = backButton>
-          <a href = "homepage.html"><img src = "gameIMGS/back.png" height="30px" ></a>
-        </button>
-      </div>
-      <h1 class = "gameName">Game Name</h1>
-        <div class="row d-flex justify-content-between">
-          <div class = "gameInfo">
-            <div id="countdown-container">
-              <div id="countdown" style>
-                <span>Timer</span> : <span id="seconds">0</span> <span>Seconds</span>
+    <header>
+      <div class = "container">
+        <div class = "d-flex justify-content-start">
+          <button id = backButton>
+            <a href = "homepage.html"><img src = "gameIMGS/back.png" height="30px" ></a>
+          </button>
+        </div>
+        <h1 class = "gameName">Game Name</h1>
+          <div class="row d-flex justify-content-between">
+            <div class = "gameInfo">
+              <div id="countdown-container">
+                <div id="countdown" style>
+                  <span>Timer</span> : <span id="seconds">0</span> <span>Seconds</span>
+                </div>
               </div>
             </div>
+            <div class = "gameInfo">
+              Score <span id = "score">0</span>
+            </div>
           </div>
-          <div class = "gameInfo">
-            Score <span id = "score">0</span>
-          </div>
-        </div>
-    </div>
+      </div>
+    </header>
 
     <div class = "container">
-      <form>
-        <div class="row chineseCards d-flex justify-content-center">
-
-          <div class="col-lg-2 col-sm-6">  
-            <label>
-              <input type="radio" name="c-radio" class="c-card0 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="c-card0Name panel-heading"></div>
+      <main>
+        <form>
+          <div class="row chineseCards d-flex justify-content-center">
+            <div class="col-lg-2 col-sm-6">  
+              <label>
+                <input type="radio" name="c-radio" class="c-card0 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="c-card0Name panel-heading"></div>
+                    <div class="panel-body">
+                      <img class="c-card0Img" src="">
+                    </div>
+                </div>
+              </label>
+            </div>
+                  
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="c-radio" class="c-card1 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="c-card1Name panel-heading"></div>
                   <div class="panel-body">
-                    <img class="c-card0Img" src="">
+                      <img class="c-card1Img" src="">
                   </div>
-              </div>
-            </label>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="c-radio" class="c-card2 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="c-card2Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="c-card2Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="c-radio" class="c-card3 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="c-card3Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="c-card3Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="c-radio" class="c-card4 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="c-card4Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="c-card4Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
           </div>
+        </form>
+        
+        <form>
+          <div class="row englishCards d-flex justify-content-center">
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="e-radio" class="e-card0 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="e-card0Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="e-card0Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+                  
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="e-radio" class="e-card1 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="e-card1Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="e-card1Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="e-radio" class="e-card2 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="e-card2Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="e-card2Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+                <input type="radio" name="e-radio" class="e-card3 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="e-card3Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="e-card3Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="col-lg-2 col-sm-6">
+              <label>
+              <input type="radio" name="e-radio" class="e-card4 card-input-element" />
+                <div class="panel panel-default card-input">
+                  <div class="e-card4Name panel-heading"></div>
+                  <div class="panel-body">
+                    <img class="e-card4Img" src="">
+                  </div>
+                </div>
+              </label>
+            </div>
                 
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="c-radio" class="c-card1 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="c-card1Name panel-heading"></div>
-                <div class="panel-body">
-                    <img class="c-card1Img" src="">
-                </div>
-              </div>
-            </label>
           </div>
+        </form>
+      </main>
 
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="c-radio" class="c-card2 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="c-card2Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="c-card2Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="c-radio" class="c-card3 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="c-card3Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="c-card3Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="c-radio" class="c-card4 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="c-card4Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="c-card4Img" src="">
-                </div>
-              </div>
-            </label>
+      <aside>
+        <div id="gameOverOverlay">
+          <div id="gameOver">
+            <div class = "congrats">
+              <h1>CONGRATULATIONS!</h1>
+            </div>          
+            <div class = "gameStats"></div>
+            <div class="newGame">
+              <a href = "homepage.html"><button>New Game</button></a>
+            </div>
           </div>
         </div>
-      </form>
-      
-      <form>
-        <div class="row englishCards d-flex justify-content-center">
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="e-radio" class="e-card0 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="e-card0Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="e-card0Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-                
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="e-radio" class="e-card1 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="e-card1Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="e-card1Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="e-radio" class="e-card2 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="e-card2Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="e-card2Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-
-          <div class="col-lg-2 col-sm-6">
-            <label>
-              <input type="radio" name="e-radio" class="e-card3 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="e-card3Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="e-card3Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-
-          <div class="col-lg-2 col-sm-6">
-            <label>
-            <input type="radio" name="e-radio" class="e-card4 card-input-element" />
-              <div class="panel panel-default card-input">
-                <div class="e-card4Name panel-heading"></div>
-                <div class="panel-body">
-                  <img class="e-card4Img" src="">
-                </div>
-              </div>
-            </label>
-          </div>
-              
-        </div>
-      </form>
-
-      <div id="gameOverOverlay">
-        <div id="gameOver">
-          <div class = "congrats">
-            <h1>CONGRATULATIONS!</h1>
-          </div>          
-          <div class = "gameStats"></div>
-          <div class="newGame">
-            <a href = "homepage.html"><button>New Game</button></a>
-          </div>
-        </div>
-      </div>
+      </aside>
     </div>
 
     <script src = "game.js"></script>
