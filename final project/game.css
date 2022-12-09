@@ -1,0 +1,115 @@
+#backButton{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgb(183, 217, 183);
+    border: solid rgb(88, 141, 88) ;
+}
+
+.gameName{
+    text-align: center;
+    font-family: Bradley Hand;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.gameInfo{
+    text-align: center;
+    font-size: 40px;
+    font-family: Bradley Hand;
+    margin-bottom: 10px;
+}
+
+.card-input {
+    width: 180px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.panel-heading{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.panel-body{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input{
+    background-color: white;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+     box-shadow: 0 0 5px 5px #7e7e7e;
+     transform: scale(1.1); 
+
+ }
+
+.chineseCards{
+    margin-top: 50px;
+    gap:40px;
+}
+
+.englishCards{
+    margin-top: 50px;
+    gap:40px;
+}
+
+.hidden {
+	display:none;
+}
+
+.visible {
+	display:block;
+}
+
+#gameOverOverlay{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#gameOver{
+    display: flex;
+    background-color: rgb(106, 175, 255);
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    font-family: Bradley Hand;
+}
+
+.congrats{
+    color:white;
+    font-weight: bolder;
+}
+
+.gameStats{
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: rgb(0, 119, 255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding:10px;
+    border-radius: 50%;
+}

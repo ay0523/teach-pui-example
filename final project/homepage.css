@@ -1,6 +1,9 @@
+body {
+    cursor: grab;
+}
+
 .header{
     display: flex;
-    width: 1500px;
     border-bottom: 5px solid green;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -8,42 +11,122 @@
 }
 
 .titleInfo{
-    margin-left: 490px;
+    margin-left: 450px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-family: Bradley Hand;
     font-size: larger;
 }
 
-.helpButton{
-margin-left: 300px;
+.lessonOptions{
+    gap: 100px;
 }
 
 .lessons-flex{
-    width: 1500px;
-    height: 680px;
+    height: 700px;
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
 .lessons-flex div{
-    width: 300px;
-    padding: 10px;
-    align-items: center;
     margin: auto;
 }
 
-a{
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-family: Gill Sans;
-    font-size: x-large;
+.lessons{
+    height: 375px;
+    background: rgb(68, 129, 93);
+    border-radius: 25px;
+    transition: all .2s ease-in-out; 
+}
+
+.lessons:hover{
+    box-shadow: 0 0 11px rgb(30, 57, 41);
+    transform: scale(1.1); 
 }
 
 .lessonImg{
-    display: block;
+    border-radius: 25px;
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     width: 99%;
+    padding: 15px;
+    background: white;
+}
+
+.lessonName{
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: Bradley Hand;
+    font-size: xx-large;
+}
+
+#helpButton{
+    margin-left: 330px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgb(220, 220, 220);
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(68, 129, 93);
+    width: 700px;
+    height: 500px;
+    margin-left: -350px; /*Half the value of width to center div*/
+    margin-top: -250px; /*Half the value of height to center div*/
+    z-index: 200;
+    border-radius: 25px;
+}
+
+#popupclose {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(51, 80, 61, 0.8);
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+.popuptitle {
+    margin-top: 25px;
+    height:auto;
+    padding: 10px;
+    margin-left: 10px;
+    font-family: Bradley Hand;
+    text-align: center;
+    color: white;
+}
+
+.popupcontent{
+    padding-top: 20px;
+    padding-left: 65px;
+    padding-right: 50px;
+    color: white;
+    font-family: Bradley hand;
+    font-size: 25px;
+
 }
 

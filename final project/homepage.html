@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel = "stylesheet" href = "homepage.css">
+<head>
+    <link rel = "stylesheet" href = "homepage.css">
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
     <body>
         <div class = "header">
-            <div class = "titleInfo">
+            <div class = "titleInfo d-flex justify-content-center">
                 <h1> Chinese Vocabulary Matching Game</h1>
             </div>
-            <div class = "helpButton">
-                <img src = "help-button/help button.png" width = "25px" height ="25px">
+            <div class="d-flex justify-content-end">
+                <button id = "helpButton">
+                    <img src = "homepageIMGS/help button.png" width = "25px" height ="25px">
+                </button>
             </div>
         </div>
 
         <div class = "lessons-flex">
-            <img class = "ldecor" src = "bamboo left.png">
-            <div class = "lessons">
-                <a href = "game.html"><img class = "lessonImg" src = "lessons/numbers.png">
-                <h2 class = lessonName> Numbers </h2></a>
+            <img class = "ldecor d-flex justify-content-between" src = "homepageIMGS/bamboo left.png" alt="green decorative bamboo">
+            <div class="row lessonOptions d-flex justify-content-center">
+                <div class = "col lessons">
+                    <a href = "game.html?game=numbers"><img class = "lessonImg" src = "homepageIMGS/numbers.png" alt="blue zero, red one, green two"><h2 class = "lessonName"> Numbers </h2></a>
+                </div>
+                <div class = "col lessons">
+                    <a href = "game.html?game=colors"><img class = "lessonImg" src = "homepageIMGS/colors.png" alt="red to orange to yellow to green to blue to purple color wheel"><h2 class = "lessonName"> Colors </h2></a>
+                </div>
+                <div class = "col lessons">
+                    <a href = "game.html?game=animals"><img class = "lessonImg" src = "homepageIMGS/animals.png" alt="black and white cartoon sitting panda"><h2 class = "lessonName"> Animals </h2></a>
+                </div>
             </div>
-            <div class = "lessons">
-                <a href = "game.html"><img class = "lessonImg" src = "lessons/colors.png">
-                <h2 class = lessonName> Colors </h2></a>
-            </div>
-            <div class = "lessons">
-                <a href = "game.html"><img class = "lessonImg" src = "lessons/animals.png" height = "297px">
-                <h2 class = lessonName> Animals </h2></a>
-            </div>
-            <img class = "ldecor" src = "bamboo right.png">
+            <img class = "ldecor d-flex justify-content-between" src = "homepageIMGS/bamboo right.png" alt="green decorative bamboo">
         </div>
 
-
-
-
+        <div id="overlay"></div>
+        <div id="popup">
+            <div class="popupcontrols">
+                <span id="popupclose">X</span>
+            </div>
+            <div class="popuptitle">
+                <h1>HOW TO PLAY</h1>
+            </div>
+            <div class = "popupcontent">
+                Match the Chinese characters with their English definition as quickly as possible.
+                <br>
+                <br>
+                Each correct pair you make, your score increases by one.
+                <br>
+                <br>
+                A timer will show you how much time you have left to find all the pairs.
+            </div>
+        </div>
 
     </body>
+    <script src="homepage.js"></script>
 </html>
