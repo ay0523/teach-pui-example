@@ -1,3 +1,4 @@
+// create card
 class Card {
     constructor(word, img, num, alt) {
         this.word = word;
@@ -6,7 +7,6 @@ class Card {
         this.alt = alt;
     }
 }
-
 
 // get the game mode
 const queryString = window.location.search;
@@ -92,6 +92,7 @@ function populateCards () {
     let chiCards = set["chi"]
     let picked = new Set()
     let htmlIndex = 0
+
     while (picked.size < 5) {
         let i = Math.floor(Math.random() * chiCards.length)
 
@@ -111,6 +112,7 @@ function populateCards () {
     let engCards = set["eng"]
     picked = new Set()
     htmlIndex = 0
+
     while (picked.size < 5) {
         let i = Math.floor(Math.random() * engCards.length)
 
@@ -130,7 +132,6 @@ function populateCards () {
 }
 
 createSets()
-
 
 //create stopwatch
 
@@ -176,7 +177,6 @@ function checkSelected () {
     }
     
     if (eng.val() != chi.val()) {
-        console.log("WRONG")
         displayTryAgain("TRY AGAIN")
 
         setTimeout(() => { 
@@ -184,8 +184,6 @@ function checkSelected () {
         }, 1000);
         score -= 1
     } else {
-        console.log("CORRECt")
-
         let engDiv = eng.next()
         engDiv.css('box-shadow', ' 0 0 5px 5px #588D58')
 
@@ -195,14 +193,12 @@ function checkSelected () {
         setTimeout(() => { 
             chiDiv.hide() 
             engDiv.hide()
-            console.log("hello")
         }, 1000);
 
         score += 1
         correct += 1
-
-        
     }
+
     $("#score").text(score)
     $("input:radio").removeAttr("checked");
 
