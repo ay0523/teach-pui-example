@@ -1,18 +1,12 @@
 class Card {
-    constructor(word, img, num) {
+    constructor(word, img, num, alt) {
         this.word = word;
-        this.img = img
-        this.num = num
+        this.img = img;
+        this.num = num;
+        this.alt = alt;
     }
 }
 
-class Match {
-    constructor(eng, chi, num) {
-        this.eng = eng
-        this.chi = chi
-        this.num = num
-    }
-}
 
 // get the game mode
 const queryString = window.location.search;
@@ -21,27 +15,27 @@ const gameMode = params.get('game');
 
 let cardData = {
    "numbers": [
-       ["One", "e.numbers/one.png", "Yi", "c.numbers/yi.png"],
-       ["Ten", "e.numbers/ten.png", "Shi", "c.numbers/shi.png"],
-       ["Hundred", "e.numbers/hundred.png", "Bai", "c.numbers/bai.png"],
-       ["Thousand", "e.numbers/thousand.png", "Qian", "c.numbers/qian.png"],
-       ["Ten Thousand", "e.numbers/tenthousand.png","Wan", "c.numbers/wan.png"],
+       ["One", "e.numbers/one.png", "roman numeral one", "Yi", "c.numbers/yi.png", "chinese character one"],
+       ["Ten", "e.numbers/ten.png", "roman numeral ten", "Shi", "c.numbers/shi.png", "chinese character ten"],
+       ["Hundred", "e.numbers/hundred.png", "roman numeral one hundred", "Bai", "c.numbers/bai.png", "chinese character hundred"],
+       ["Thousand", "e.numbers/thousand.png", "roman numeral one thousand","Qian", "c.numbers/qian.png", "chinese character thousand"],
+       ["Ten Thousand", "e.numbers/tenthousand.png","roman numeral ten thousand","Wan", "c.numbers/wan.png", "chinese character ten thousand"],
     ], 
 
     "colors": [
-        ["Orange","e.colors/orange.png", "Cheng", "c.colors/cheng.png"],
-        ["Red","e.colors/red.png", "Hong", "c.colors/hong.png"],
-        ["Yellow","e.colors/yellow.png", "Huang", "c.colors/huang.png"],
-        ["Blue","e.colors/blue.png", "Lan", "c.colors/lan.png"],
-        ["Green","e.colors/green.png", "Lu", "c.colors/lu.png"]
+        ["Orange","e.colors/orange.png", "orange square", "Cheng", "c.colors/cheng.png", "chinese character orange"],
+        ["Red","e.colors/red.png", "red square", "Hong", "c.colors/hong.png", "chinese character red"],
+        ["Yellow","e.colors/yellow.png", "yellow square", "Huang", "c.colors/huang.png", "chinese character yellow"],
+        ["Blue","e.colors/blue.png", "blue square", "Lan", "c.colors/lan.png", "chinese character blue"],
+        ["Green","e.colors/green.png", "green square", "Lu", "c.colors/lu.png", "chinese character green"]
     ],
 
     "animals": [
-        ["Dog","e.animals/dog.png", "Gou", "c.animals/gou.png"],
-        ["Horse","e.animals/horse.png", "Ma", "c.animals/ma.png"],
-        ["Cat","e.animals/cat.png", "Mao", "c.animals/mao.png"],
-        ["Cow","e.animals/cow.png", "Nui", "c.animals/nui.png"],
-        ["Rabbit","e.animals/rabbit.png", "Tu", "c.animals/tu.png"]
+        ["Dog","e.animals/dog.png", "cartoon brown dog with red collar", "Gou", "c.animals/gou.png", "chinese character dog"],
+        ["Horse","e.animals/horse.png", "cartoon brown horse on back two legs", "Ma", "c.animals/ma.png", "chinese character horse"],
+        ["Cat","e.animals/cat.png", "cartoon yellow cat sitting", "Mao", "c.animals/mao.png", "chinese character cat"],
+        ["Cow","e.animals/cow.png", "cartoon cow with yellow bell around neck", "Nui", "c.animals/nui.png", "chinese character cow"],
+        ["Rabbit","e.animals/rabbit.png", "cartoon grey rabbit", "Tu", "c.animals/tu.png", "chinese character rabbit"]
 
     ]
 
@@ -70,22 +64,22 @@ function createSets () {
     // numbers set
     let currSet = cardData["numbers"]
     for (let i = 0; i < currSet.length; i++) {
-        gameData["numbers"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i))
-        gameData["numbers"]["chi"].push(new Card(currSet[i][2], currSet[i][3], i))
+        gameData["numbers"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i, currSet[i][2]))
+        gameData["numbers"]["chi"].push(new Card(currSet[i][3], currSet[i][4], i, currSet[i][5]))
     }
 
     // colors set
     currSet = cardData["colors"]
     for (let i = 0; i < currSet.length; i++) {
-        gameData["colors"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i))
-        gameData["colors"]["chi"].push(new Card(currSet[i][2], currSet[i][3], i))
+        gameData["colors"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i, currSet[i][2]))
+        gameData["colors"]["chi"].push(new Card(currSet[i][3], currSet[i][4], i, currSet[i][5]))
     }
 
     // animals set
     currSet = cardData["animals"]
     for (let i = 0; i < currSet.length; i++) {
-        gameData["animals"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i))
-        gameData["animals"]["chi"].push(new Card(currSet[i][2], currSet[i][3], i))
+        gameData["animals"]["eng"].push(new Card(currSet[i][0], currSet[i][1], i, currSet[i][2]))
+        gameData["animals"]["chi"].push(new Card(currSet[i][3], currSet[i][4], i, currSet[i][5]))
     }
     
 }
@@ -109,6 +103,7 @@ function populateCards () {
         $(`.c-card${htmlIndex}`).val(card.num)
         $(`.c-card${htmlIndex}Name`).text(card.word)
         $(`.c-card${htmlIndex}Img`).attr("src", card.img)
+        $(`.c-card${htmlIndex}Img`).attr("alt", card.alt)
         htmlIndex += 1
         picked.add(i)
     }
@@ -127,6 +122,7 @@ function populateCards () {
         $(`.e-card${htmlIndex}`).val(card.num)
         $(`.e-card${htmlIndex}Name`).text(card.word)
         $(`.e-card${htmlIndex}Img`).attr("src", card.img)
+        $(`.e-card${htmlIndex}Img`).attr("alt", card.alt)
         htmlIndex += 1
         picked.add(i)
     }
